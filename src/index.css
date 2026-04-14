@@ -33,6 +33,7 @@
 }
 
 @theme {
+  /* FONTS */
   --font-kanji: "Kikai Chokoku JIS", "Kei Ji", "Klee One", "Yu Mincho", serif;
   
   --font-kikai: "Kikai Chokoku JIS", serif;

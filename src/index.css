@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Kei Ji";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("./assets/font/kei_ji-p.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kikai Chokoku JIS";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("./assets/font/fkKikaiChokokuTTF.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Caviar";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("./assets/font/CaviarDreams.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Caviar Bold";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("./assets/font/CaviarDreams_Bold.ttf") format("truetype");
+}
+
+@theme {
+  --font-kanji: "Kikai Chokoku JIS", "Kei Ji", "Klee One", "Yu Mincho", serif;
+  
+  --font-kikai: "Kikai Chokoku JIS", serif;
+  --font-keiji: "Kei Ji", serif;
+
+  --font-caviar: "Caviar", arial;
+  --font-caviar-bold: "Caviar Bold", arial;
+
+  --color-background: #e6d6f3;
+  --color-foreground: #f0edf1;
+ 
+  --color-btn: #27272a;
+  --color-btn-border: #3f3f46;
+  --color-btn-hover: #ceeab6;
+  --color-btn-text: #302e33;
+
+  --color-subtitle: #71717a;
+  --color-footer: #52525b;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #302e33;
+  --color-card-border: #424244;
+  --color-card-shadow: #d2b6ea;
+}

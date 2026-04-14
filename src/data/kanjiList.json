@@ -1,0 +1,20 @@
+[
+  { "kanji": "男", "reading": "おとこ" },
+  { "kanji": "女", "reading": "おんな" },
+  { "kanji": "好", "reading": "す（き）" },
+  { "kanji": "作", "reading": "つく（る）" },
+  { "kanji": "出", "reading": "だ（す）" },
+  { "kanji": "書", "reading": "か（く）" },
+  { "kanji": "分", "reading": "ふん" },
+  { "kanji": "午", "reading": "ご" },
+  { "kanji": "前", "reading": "まえ" },
+  { "kanji": "後", "reading": "ご" },
+  { "kanji": "有", "reading": "ゆう" },
+  { "kanji": "名", "reading": "めい" },
+  { "kanji": "父", "reading": "ちち" },
+  { "kanji": "母", "reading": "はは" },
+  { "kanji": "兄", "reading": "あに" },
+  { "kanji": "弟", "reading": "おとうと" },
+  { "kanji": "姉", "reading": "あね" },
+  { "kanji": "妹", "reading": "いもうと" }
+]

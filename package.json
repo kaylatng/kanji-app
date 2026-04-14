@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "packageManager": "npm@11.6.1",
-  "homepage": "https://kthuy.github.io/kanji-app",
+  "homepage": "https://kaylatng.github.io/kanji-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

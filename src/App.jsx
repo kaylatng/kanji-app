@@ -39,17 +39,18 @@ function readingsToOptions(cardIndex, list) {
 
 function App() {
   const [currentIdx, setCurrentIdx] = useState(0);
+  const shuffledCards = useMemo(() => shuffle(kanjiList), []);
 
-  const currentCard = kanjiList[currentIdx];
+  const currentCard = shuffledCards[currentIdx];
 
   const options = useMemo(
-    () => readingsToOptions(currentIdx, kanjiList),
-    [currentIdx]
+    () => readingsToOptions(currentIdx, shuffledCards),
+    [currentIdx, shuffledCards]
   );
 
   const checkAnswer = (selected) => {
     if (selected === currentCard.reading) {
-      setCurrentIdx((prev) => (prev + 1) % kanjiList.length);
+      setCurrentIdx((prev) => (prev + 1) % shuffledCards.length);
     } else {
       console.log('Wrong answer');
     }
@@ -69,7 +70,11 @@ function App() {
         <div className="absolute inset-0 bg-card-shadow rounded-2xl translate-x-2 translate-y-2"></div>
 
         <div className="relative w-64 md:w-90 lg:w-120 h-80 bg-card border-4 border-card-border rounded-2xl flex items-center justify-center transition-transform active:scale-95">
-          <span className="font-kanji text-9xl font-bold text-card-foreground selection:bg-none">
+          <span
+            className={`font-kanji font-bold text-card-foreground selection:bg-none ${
+              currentCard.kanji.length > 1 ? 'text-7xl' : 'text-9xl'
+            }`}
+          >
             {currentCard.kanji}
           </span>
         </div>
@@ -82,7 +87,9 @@ function App() {
             key={`${currentIdx}-${i}-${option}`}
             type="button"
             onClick={() => checkAnswer(option)}
-            className="font-kanji py-4 bg-btn border-2 border-btn-border rounded-xl font-bold text-xl text-foreground hover:bg-btn-hover hover:text-btn-text hover:border-card-border transition-all active:translate-y-1 shadow-lg"
+            className={`font-kanji py-4 bg-btn border-2 border-btn-border rounded-xl font-bold text-foreground hover:bg-btn-hover hover:text-btn-text hover:border-card-border transition-all active:translate-y-1 shadow-lg ${
+              option.length > 5 ? 'text-lg' : 'text-xl'
+            }`}
           >
             {option}
           </button>
@@ -91,7 +98,7 @@ function App() {
 
       {/* progress footer */}
       <footer className="mt-12 text-footer font-caviar text-sm">
-        CARD {currentIdx + 1} / {kanjiList.length}
+        CARD {currentIdx + 1} / {shuffledCards.length}
       </footer>
     </main>
   );
